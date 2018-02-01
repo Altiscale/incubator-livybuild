@@ -1,0 +1,3 @@
+[submodule "incubator-livy"]
+	path = incubator-livy
+	url = https://github.com/Altiscale/incubator-livy.git
