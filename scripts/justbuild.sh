@@ -23,11 +23,6 @@ if [ -f "$curr_dir/setup_env.sh" ]; then
   set +a
 fi
 
-if [ ! -e "$livy_spec" ] ; then
-  echo "fail - missing $livy_spec file, can't continue, exiting"
-  exit -9
-fi
-
 env | sort
 
 if [ "x${LIVY_BRANCH_NAME}" = "x" ] ; then
@@ -83,7 +78,7 @@ if [ -f "$mvn_settings" ] ; then
     -S ./alti-livy.tar.gz \
     -D "_current_workspace $WORKSPACE"\
     "_livy_version $LIVY_VERSION" "_scala_build_version $SCALA_VERSION" "_git_hash_release $git_hash"\
-    "_hadoop_version $HADOOP_VERSION" "_hive_version $HIVE_VERSION" "_altiscale_release_ver $ALTISCALE_RELEASE"\
+    "_hadoop_version $HADOOP_VERSION" "_spark_version $SPARK_VERSION" "_altiscale_release_ver $ALTISCALE_RELEASE"\
     "_apache_name $LIVY_PKG_NAME"\
     "_build_release $BUILD_TIME" "_production_release $PRODUCTION_RELEASE"\
     "$mvn_macros_def_list"\
@@ -95,7 +90,7 @@ else
     -S ./alti-livy.tar.gz \
     -D "_current_workspace $WORKSPACE"\
     "_livy_version $LIVY_VERSION" "_scala_build_version $SCALA_VERSION" "_git_hash_release $git_hash"\
-    "_hadoop_version $HADOOP_VERSION" "_hive_version $HIVE_VERSION" "_altiscale_release_ver $ALTISCALE_RELEASE"\
+    "_hadoop_version $HADOOP_VERSION" "_spark_version $SPARK_VERSION" "_altiscale_release_ver $ALTISCALE_RELEASE"\
     "_apache_name $LIVY_PKG_NAME"\
     "_build_release $BUILD_TIME" "_production_release $PRODUCTION_RELEASE"
 fi

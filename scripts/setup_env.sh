@@ -12,7 +12,7 @@ export MAVEN_OPTS=${MAVEN_OPTS:-"-Xmx2g -XX:MaxPermSize=1024M -XX:ReservedCodeCa
 export SCALA_HOME=${SCALA_HOME:-"/opt/scala"}
 export HADOOP_VERSION=${HADOOP_VERSION:-"2.7.4"}
 # Spark 1.5+ default Hive starts with 1.2.1, backward compatible with Hive 1.2.0
-export HIVE_VERSION=${HIVE_VERSION:-"1.2.1"}
+export SPARK_VERSION=${SPARK_VERSION:-"2.2.1"}
 
 export PATH=$PATH:$M2_HOME/bin:$SCALA_HOME/bin:$ANT_HOME/bin:$JAVA_HOME/bin
 
