@@ -25,15 +25,15 @@ fi
 
 env | sort
 
-if [ "x${LIVY_BRANCH_NAME}" = "x" ] ; then
-  echo "error - LIVY_BRANCH_NAME is not defined. Please specify the branch explicitly. Exiting!"
+if [ "x${PACKAGE_BRANCH}" = "x" ] ; then
+  echo "error - PACKAGE_BRANCH is not defined. Please specify the branch explicitly. Exiting!"
   exit -9
 fi
 
-echo "ok - extracting git commit label from user defined $LIVY_BRANCH_NAME"
+echo "ok - extracting git commit label from user defined $PACKAGE_BRANCH"
 pushd $livy_git_dir
 git_hash=$(git rev-parse HEAD | tr -d '\n')
-echo "ok - we are compiling livy branch $LIVY_BRANCH_NAME upto commit label $git_hash"
+echo "ok - we are compiling livy branch $PACKAGE_BRANCH upto commit label $git_hash"
 popd
 
 # Get a copy of the source code, and tar ball it, remove .git related files
