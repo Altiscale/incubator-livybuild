@@ -31,20 +31,8 @@ popd
 # Rename directory from livy to alti-livy to distinguish 'livy' just in case.
 echo "ok - tar zip livy-xxx source file, preparing for build/compile by rpmbuild"
 pushd $WORKSPACE
-pushd $livy_git_dir/../
-  tar --exclude .git --exclude .gitignore -cf $workspace_rpm_dir/livy.tar incubator-livy
-popd
 
-pushd $workspace_rpm_dir
-tar -xf livy.tar
-if [ -d alti-livy ] ; then
-  rm -rf alti-livy
-fi
-mv incubator-livy alti-livy
-tar --exclude .git --exclude .gitignore -czf alti-livy.tar.gz alti-livy
-popd
-
-echo "build - entire livy project in $workspace_rpm_dir"
+echo "build - entire livy project in $WORKSPACE"
 
 if [ "x${HADOOP_VERSION}" = "x" ] ; then
   echo "fatal - HADOOP_VERSION needs to be set, can't build anything, exiting"
