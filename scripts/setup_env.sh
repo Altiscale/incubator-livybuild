@@ -12,6 +12,7 @@ export ANT_HOME=${ANT_HOME:-"/opt/apache-ant"}
 export MAVEN_HOME=${MAVEN_HOME:-"/usr/share/apache-maven"}
 export M2_HOME=${M2_HOME:-"/usr/share/apache-maven"}
 export SCALA_HOME=${SCALA_HOME:-"/opt/scala"}
+export SCALA_VERSION=${SCALA_VERSION:-"2.11"}
 export HADOOP_VERSION=${HADOOP_VERSION:-"2.7.4"}
 # Spark 1.5+ default Hive starts with 1.2.1, backward compatible with Hive 1.2.0
 export SPARK_VERSION=${SPARK_VERSION:-"2.2.1"}

@@ -27,12 +27,7 @@ git_hash=$(git rev-parse HEAD | tr -d '\n')
 echo "ok - we are compiling livy branch $PACKAGE_BRANCH upto commit label $git_hash"
 popd
 
-# Get a copy of the source code, and tar ball it, remove .git related files
-# Rename directory from livy to alti-livy to distinguish 'livy' just in case.
-echo "ok - tar zip livy-xxx source file, preparing for build/compile by rpmbuild"
-pushd $WORKSPACE
-
-echo "build - entire livy project in $WORKSPACE"
+echo "build - entire livy project in $livy_git_dir/"
 
 if [ "x${HADOOP_VERSION}" = "x" ] ; then
   echo "fatal - HADOOP_VERSION needs to be set, can't build anything, exiting"
@@ -40,7 +35,7 @@ if [ "x${HADOOP_VERSION}" = "x" ] ; then
 fi
 
 echo "ok - building entire pkg with HADOOP_VERSION=$HADOOP_VERSION SPARK_VERSION=$SPARK_VERSION scala=$SCALA_VERSION"
-
+pushd $livy_git_dir
 # PURGE LOCAL CACHE for clean build
 # mvn dependency:purge-local-repository
 
@@ -71,8 +66,6 @@ if [ $? -ne "0" ] ; then
   exit -99
 fi
 popd
-
-
 
 echo "ok - build Livy $LIVY_VERSION completed successfully!"
 
