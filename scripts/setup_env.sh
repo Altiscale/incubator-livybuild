@@ -30,5 +30,4 @@ export MAVEN_OPTS=${MAVEN_OPTS:-"-Xmx2048m -XX:MaxPermSize=1024m"}
 export BUILD_TIME=$(date +%Y%m%d%H%M)
 # Customize build OPTS for MVN
 
-workspace_dir=$curr_dir
-export WORKSPACE=${WORKSPACE:-$workspace_dir}
+DEBUG_MAVEN=${DEBUG_MAVEN:-"false"}
