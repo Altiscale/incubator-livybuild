@@ -36,6 +36,7 @@ cd ${INSTALL_DIR}
 cd ${RPM_DIR}
 
 export RPM_NAME=`echo alti-livy-${LIVY_VERSION}`
+
 fpm --verbose \
 --maintainer andrew.lee02@sap.com \
 --vendor SAP \
@@ -48,8 +49,10 @@ fpm --verbose \
 -v ${ALTISCALE_RELEASE} \
 --iteration ${DATE_STRING} \
 --description "${RPM_DESCRIPTION}" \
-${CONFIG_FILES} \
 --rpm-attr 755,root,root:/opt/livy/bin/livy-server \
+--rpm-user root \
+--rpm-group root \
+--rpm-auto-add-directories \
 -C ${INSTALL_DIR} \
 opt
 
