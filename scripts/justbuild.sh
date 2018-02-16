@@ -16,6 +16,7 @@ if [ -f "$curr_dir/setup_env.sh" ]; then
 fi
 
 env | sort
+python -V
 
 if [ "x${PACKAGE_BRANCH}" = "x" ] ; then
   echo "error - PACKAGE_BRANCH is not defined. Please specify the branch explicitly. Exiting!"
