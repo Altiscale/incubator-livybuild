@@ -61,9 +61,9 @@ else
 fi
 
 if [ "x${DEBUG_MAVEN}" = "xtrue" ] ; then
-  mvn_cmd="mvn -U -X $spark_profile_str package"
+  mvn_cmd="mvn -U -X $spark_profile_str package -DskipTests"
 else
-  mvn_cmd="mvn -U $spark_profile_str package"
+  mvn_cmd="mvn -U $spark_profile_str package -DskipTests"
 fi
 echo "exec - $mvn_cmd"
 $mvn_cmd
