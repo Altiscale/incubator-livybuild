@@ -13,7 +13,7 @@ if [ -f "$curr_dir/setup_env.sh" ]; then
   set +a
 fi
 
-ALTISCALE_RELEASE=${ALTISCALE_RELEASE:-4.0.0}
+ALTISCALE_RELEASE=${ALTISCALE_RELEASE:-5.0.0}
 RPM_DESCRIPTION="Apache Livy ${LIVY_VERSION}\n\n${DESCRIPTION}"
 
 # convert the tarball into an RPM

@@ -15,13 +15,13 @@ export SCALA_HOME=${SCALA_HOME:-"/opt/scala"}
 export SCALA_VERSION=${SCALA_VERSION:-"2.11"}
 export HADOOP_VERSION=${HADOOP_VERSION:-"2.7.4"}
 # Spark 1.5+ default Hive starts with 1.2.1, backward compatible with Hive 1.2.0
-export SPARK_VERSION=${SPARK_VERSION:-"2.2.1"}
+export SPARK_VERSION=${SPARK_VERSION:-"2.1.1"}
 
 export PATH=$PATH:$M2_HOME/bin:$SCALA_HOME/bin:$ANT_HOME/bin:$JAVA_HOME/bin
 
 # Honor incubator-livy-pkg-env.sh env varibales and value
 export PACKAGE_NAME=${PACKAGES:-"incubator-livy"}
-export LIVY_VERSION=${LIVY_VERSION:-"0.4.0"}
+export LIVY_VERSION=${LIVY_VERSION:-"0.5.0"}
 export MAVEN_OPTS=${MAVEN_OPTS:-"-Xmx2048m -XX:MaxPermSize=1024m"}
 
 # centos6.5-x86_64
