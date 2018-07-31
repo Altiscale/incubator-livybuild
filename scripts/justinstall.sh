@@ -24,10 +24,10 @@ OPT_DIR=${INSTALL_DIR}/opt
 mkdir --mode=0755 -p ${OPT_DIR}
 cd ${OPT_DIR}
 
-mv ${WORKSPACE}/alti-livy/assembly/target/livy-server-${LIVY_VERSION}-incubating.zip ${OPT_DIR}/
+mv ${WORKSPACE}/incubator-livy/assembly/target/livy-${LIVY_VERSION}-incubating-SNAPSHOT-bin.zip ${OPT_DIR}/
 pushd ${OPT_DIR}
-unzip livy-server-${LIVY_VERSION}-incubating.zip
-mv livy-server-${LIVY_VERSION}-incubating livy-${LIVY_VERSION}
+unzip livy-${LIVY_VERSION}-incubating-SNAPSHOT-bin.zip 
+mv livy-${LIVY_VERSION}-incubating-SNAPSHOT-bin livy-${LIVY_VERSION}
 popd
 chmod 755 ${OPT_DIR}/livy-${LIVY_VERSION}
 
