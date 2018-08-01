@@ -56,7 +56,7 @@ else
   exit -9
 fi
 
-mvn_cmd="mvn -U -X $spark_profile_str package"
+mvn_cmd="mvn -U -X $spark_profile_str package -DskipTests"
 echo "$mvn_cmd"
 $mvn_cmd
 
