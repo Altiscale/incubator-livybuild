@@ -27,9 +27,9 @@ cd ${OPT_DIR}
 mv ${WORKSPACE}/incubator-livy/assembly/target/livy-${LIVY_VERSION}-incubating-SNAPSHOT-bin.zip ${OPT_DIR}/
 pushd ${OPT_DIR}
 unzip livy-${LIVY_VERSION}-incubating-SNAPSHOT-bin.zip 
-mv livy-${LIVY_VERSION}-incubating-SNAPSHOT-bin livy-${LIVY_VERSION}
+mv livy-${LIVY_VERSION}-incubating-SNAPSHOT-bin alti-livy-${LIVY_VERSION}
 popd
-chmod 755 ${OPT_DIR}/livy-${LIVY_VERSION}
+chmod 755 ${OPT_DIR}/alti-livy-${LIVY_VERSION}
 
 cd ${INSTALL_DIR}
 
