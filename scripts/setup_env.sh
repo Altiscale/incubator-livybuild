@@ -21,7 +21,7 @@ export PATH=$PATH:$M2_HOME/bin:$SCALA_HOME/bin:$ANT_HOME/bin:$JAVA_HOME/bin
 
 # Honor incubator-livy-pkg-env.sh env varibales and value
 export PACKAGE_NAME=${PACKAGES:-"incubator-livy"}
-export LIVY_VERSION=${LIVY_VERSION:-"0.5.0"}
+export LIVY_VERSION=${LIVY_VERSION:-"0.5.1"}
 export MAVEN_OPTS=${MAVEN_OPTS:-"-Xmx2048m -XX:MaxPermSize=1024m"}
 
 # centos6.5-x86_64
